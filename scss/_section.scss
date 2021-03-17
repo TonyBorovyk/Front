@@ -1,0 +1,64 @@
+.section {
+  padding-top: 1px;
+
+  @media (max-width:575px) {}
+
+  &--sale {
+    background: rgba(232, 93, 4, 0.5);
+  }
+
+  &--hits {
+    background: rgba(238, 134, 67, 0.9);
+  }
+
+  &--news {
+    background: #FDD280;
+  }
+
+  &__title {
+    margin: -66px auto 0;
+    padding: 15px;
+    max-width: 435px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    color: $black;
+    background: rgba(232, 93, 4, 0.5);
+    border-radius: 10px 10px 0px 0px;
+
+    @media (max-width: 1024px) {
+      margin: -56px auto 0;
+      max-width: 320px;
+      font-size: 22px;
+      line-height: 1.2;
+    }
+
+    @media (max-width: 575px) {
+      margin: -52px auto 0;
+      max-width: 250px;
+      font-size: 18px;
+    }
+
+    &--light {
+      background: #FDD280;
+    }
+  }
+
+  &--padding {
+    padding-bottom: 280px;
+
+    @media (max-width:1024px) {
+      padding-bottom: 140px;
+    }
+
+    &-sm {
+      padding-bottom: 200px;
+
+      @media (max-width:1024px) {
+        padding-bottom: 140px;
+      }
+    }
+  }
+}

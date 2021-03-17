@@ -1,0 +1,111 @@
+.pagination {
+  margin-top: 60px;
+
+  @media (max-width: 696px) {
+    margin-bottom: 80px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 10px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #706262;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn {
+    padding: 8px 20px;
+    border-radius: 0px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 1.2;
+    position: relative;
+
+    @media (max-width:696px) {
+      font-size: 20px;
+    }
+
+    @media (max-width: 575px) {
+      padding: 0;
+      font-size: 0;
+    }
+
+    &::before {
+      position: absolute;
+      display: inline-block;
+      content: "";
+      right: -27px;
+      top: 1px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 26px 0 26px 27px;
+      border-color: transparent transparent transparent #FFD501;
+
+      @media (max-width:696px) {
+        border-width: 19px 0 19px 27px;
+      }
+
+      @media (max-width: 575px) {
+        right: -22px;
+        top: -18px;
+      }
+    }
+
+    &--prev {
+      position: relative;
+
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        display: inline-block;
+        left: -27px;
+        top: 1px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 26px 27px 26px 0;
+        border-color: transparent #FFD501 transparent transparent;
+
+        @media (max-width:696px) {
+          border-width: 19px 27px 19px 0;
+        }
+        @media (max-width: 575px) {
+          left: -25px;
+          top: -18px;
+        }
+      }
+    }
+  }
+
+  &__num {
+    margin-left: 30px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    color: #432F2F;
+
+    &--active {
+      color: #ED0707;
+    }
+
+    &:nth-child(4) {
+      margin-right: 30px;
+    }
+  }
+}

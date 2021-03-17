@@ -1,0 +1,33 @@
+.btn {
+  background: none;
+  border: none;
+  border-radius: 50px;
+  font-family: inherit;
+  display: inline-flex;
+  background-color: $yellow;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: $black;
+  padding: 10px 50px;
+  transition: all .3s ease-in-out;
+  &--sm {
+    padding: 5px 28px;
+  }
+  &--lg {
+    padding: 15px 80px;
+    @media (max-width:767px) {
+      padding: 10px 40px;
+    }
+    @media (max-width:575px) {
+      padding: 6px 25px;
+    }
+  }
+  &--unique {
+    border-radius: 0px 100px;
+  }
+  &:hover, &:focus {
+    background-color: darken($yellow, 5%);
+  }
+}

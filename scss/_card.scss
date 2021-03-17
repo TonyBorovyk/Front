@@ -1,0 +1,123 @@
+.card {
+  display: flex;
+  flex-direction: column;
+
+  &__wrap {
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0px 60px;
+
+    &--catalog {
+      padding-bottom: 40px;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+
+    @media (max-width:1024px) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0px 40px;
+      grid-template-rows: auto;
+
+      .card:nth-child(5) {
+        display: none;
+      }
+    }
+
+    @media (max-width:868px) {
+      gap: 0px 20px;
+    }
+
+    @media (max-width: 696px) {
+      padding-top: 40px;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px 100px;
+
+      .card:nth-child(5) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 575px) {
+      grid-template-columns: 1fr 1fr;
+      gap: 40px 60px;
+      grid-template-rows: auto;
+
+      .card:nth-child(5) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 405px) {
+      gap: 30px;
+    }
+  }
+
+  &__inner {
+    flex-grow: 1;
+  }
+
+  &__title {
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+
+    h3 {
+      margin: 0;
+      margin-bottom: 10px;
+      margin-top: 15px;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 22px;
+      color: $black;
+
+      @media (max-width: 991px) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      @media (max-width: 575px) {
+        font-size: 15px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  &__author {
+    margin: 0;
+    margin-bottom: 7px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: $black;
+
+    @media (max-width: 575px) {
+      font-size: 13px;
+    }
+  }
+
+  &__price {
+    margin-bottom: 5px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    color: #F7451E;
+  }
+
+  &__btn {
+    align-self: flex-start;
+    @media (max-width: 405px) {
+      align-self: flex-start;
+      padding: 10px 35px;
+    }
+  }
+}

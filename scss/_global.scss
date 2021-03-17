@@ -1,0 +1,62 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $primary-font;
+  font-size: 15px;
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1320px;
+  padding: 0px 15px;
+  margin: 0 auto;
+  @media (max-width: 575px) {
+    max-width: 540px;
+  }
+}
+
+ul,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn,
+button,
+a {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: inherit;
+}
+
+.logo {
+  &__img {
+    max-height: 59px;
+    @media (max-width:868px) {
+      max-height: 40px;
+    }
+    @media(max-width:696px) {
+      max-height: 59px;
+    }
+  }
+}

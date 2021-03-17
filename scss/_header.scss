@@ -1,0 +1,251 @@
+.header {
+  background: rgba(232, 167, 69, 0.31);
+  padding-top: 70px;
+  padding-bottom: 110px;
+
+  @media (max-width: 696px) {
+    padding-top: 15px;
+  }
+
+  &--info {
+    padding-bottom: 70px;
+    background: rgba(232, 93, 4, 0.31);
+
+    .header__top {
+      margin-bottom: 0;
+    }
+  }
+
+  &--catalog {
+    padding-bottom: 45px;
+    background: rgba(232, 167, 69, 0.31);
+
+    .header__top {
+      margin-bottom: 0;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 85px;
+    position: relative;
+
+
+    @media (max-width: 696px) {
+      margin-bottom: 30px;
+      flex-direction: column;
+      align-items: initial;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__logo {
+    transition: all .3s ease-in-out;
+
+    @media (max-width: 696px) {
+      flex-grow: 1;
+      align-self: center;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: .7;
+    }
+  }
+
+  &__nav {
+    @media (max-width: 696px) {
+      display: none;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__shop {
+    display: flex;
+    align-items: center;
+
+    &-img {
+      width: 32px;
+      height: 32px;
+      margin-right: 22px;
+
+      @media (max-width: 868px) {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+      }
+    }
+
+    &-btn {
+      color: #3E0784;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      padding: 5px 15px;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &__hero {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 250px;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 70px;
+    }
+
+    @media (max-width: 696px) {
+      margin-bottom: 0;
+    }
+
+    &-img {
+      border-radius: 9px;
+
+      @media (max-width: 696px) {
+        display: none;
+      }
+    }
+
+    &-btn {
+      @media (max-width: 1024px) {
+        align-self: center;
+        margin-bottom: 70px;
+      }
+
+      @media (max-width: 696px) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__content {
+    margin-top: 40px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    @media (max-width: 1024px) {
+      margin-top: 0;
+      margin-right: 0;
+    }
+
+    &-img {
+      border-radius: 9px;
+      display: none;
+
+      @media (max-width: 696px) {
+        display: inline-flex;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 25px;
+    max-width: 550px;
+    font-family: $roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 47px;
+    color: $black;
+
+    @media (max-width: 696px) {
+      font-size: 24px;
+      line-height: 30px;
+      align-self: center;
+      max-width: 330px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 70px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: $black;
+    position: relative;
+
+    @media (max-width: 696px) {
+      margin-bottom: 75px;
+      margin-top: 25px;
+      align-self: center;
+    }
+  }
+
+  &__span {
+    position: absolute;
+    top: 30px;
+    right: 15px;
+    font-family: $roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 15px;
+    color: $black;
+  }
+
+  &__mobile {
+    &-menu {
+      display: none;
+
+      @media (max-width: 696px) {
+        display: flex;
+        align-items: center;
+        padding: 8px 12px;
+        background: #EA9F68;
+        border-radius: 25px;
+        border: 1px solid transparent;
+
+      }
+    }
+
+    &-text {
+      margin: 0;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 15px;
+      color: $black;
+    }
+
+    &-line {
+      font-size: 0;
+      color: transparent;
+      width: 25px;
+      height: 2px;
+      background-color: $black;
+      margin-right: 8px;
+      position: relative;
+
+      &::after,
+      &::before {
+        position: absolute;
+        content: "";
+        width: inherit;
+        height: inherit;
+        background-color: inherit;
+        left: 0;
+        right: 0;
+        top: 7px;
+      }
+
+      &:after {
+        top: -7px;
+      }
+    }
+  }
+}
