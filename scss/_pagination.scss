@@ -108,4 +108,7 @@
       margin-right: 30px;
     }
   }
+  a.pagination__btn.btn {
+    pointer-events: none;
+}
 }
